@@ -1,0 +1,79 @@
+$card-bg: transparent;
+$border-color: #343434;
+$link-color: black;
+$text-color: black;
+$secondary-text: #a0a2a4;
+
+.account-chooser {
+  padding: 20px;
+  text-align: center;
+
+  .account-chooser-card {
+    background: $card-bg;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 25px 30px;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+
+    .title {
+      font-size: 20px;
+      color: $text-color;
+      margin: 0 0 15px 0;
+      font-weight: normal;
+    }
+
+    .accounts {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-bottom: 1px solid $border-color;
+
+        button {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 15px 0;
+          border: none;
+          outline: none;
+          background: none;
+          cursor: pointer;
+
+          .account-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: $link-color;
+            margin-left: 4px;
+          }
+          .account-email {
+            font-size: 14px;
+            color: $secondary-text;
+            margin-left: 4px;
+          }
+        }
+
+        &:hover button {
+          background-color: #f0f0f0;
+        }
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .create-text {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .account-chooser-card {
+    width: 100%;
+  }
+}
